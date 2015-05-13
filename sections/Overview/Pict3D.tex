@@ -1,0 +1,13 @@
+%!TEX root = ../../report.tex
+
+\subsection{Pict3D} % (fold)
+\label{sub:pict3d}
+
+Pict3D is a tool written in Typed Racket that provides a functional interface to rendering hardware. This interface provides a set of geometric primitives that allows the user to produce a large set of very different models.
+
+This tool provides also visualization mechanisms. It takes advantage of the Racket environment, DrRacket and can show the models in it's REPL along with the usual window visualization.
+
+The big issue with this tool is performance. DrRacket have known performance issues, because it instruments the code for debug by default and also the garbage collection system is sometimes slow. This tool also have the issues inherent to interprocess communication.
+
+
+% subsection pict3d (end)

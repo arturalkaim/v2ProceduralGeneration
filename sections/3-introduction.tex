@@ -1,0 +1,47 @@
+%!TEX root = ../report.tex
+
+% 
+% Introduction
+% 
+
+\section{Introduction}
+
+%General description of the problem and its context, current solutions, and road map of the project.
+
+%This days designers and developers have available a large number of Computer Aided Design(CAD) tools to produce their models. This tools are getting more and more powerful and with more features available. The tradicional way of modeling where the user adds geometry one by one does not present performance issues about rendering. On the other hand it is being more and more common the concept of denerative design, that is a design method that is based on a programming approach which allows architects and designers to model large amounts of shapes with significantly less effort.
+
+As technology evolves and people get new and more powerful devices, they want to take advantage of that and have more realistic\textbf{(powerful ?)} experiences with larger, more detailed and complex contents.
+And this is observable in the graphic contents. With the recent extra high definition on screens and the computational power of the machines beating records, the graphic content have to follow up that characteristics in quantity as well as in quality. The issue is that the manual content generation takes a long work time from architects and designers to achieve this quality, thus implying high costs.
+
+Graphic contents are mainly used for enterteinment, both in the gaming and movie industries, but it is also used in a lot more different areas. The fields of architecture and design, for instance, use this technique to experiment and model new designs, from small objects like a plate to buildings or even entire cities. So also in this field they face also the problems that raises from the modelling of really big sets of objects and forms manualy. \emph{This work focus on this problem of content creation for the fields of architecture and design.}
+
+The obvious answer to this problem of manual content creation costs is to contract more architects or designers to each project to increase the production, but experience have shown that this solution is not scalable, that means that double the number of architects or designers working in a project will not double their overall productivity. Also this solution have a big impact on costs, that would take immediately out of the market new producers with less resources.
+
+A solution for this problem is the use of generative design. That is a design method that is based on a programming approach which allows architects and designers to model complex shapes with significantly less effort. 
+
+Although most computer-aided design (CAD) applications provide programming languages for generative design, programs written in these languages have very limited portability. This languages are not pedagogical and and are dificult to use even to experienced programmers, problems that create barriers to adherence to this approach by users that normally are not used to code.\cite{ramos_et_al:OASIcs:2014:4565}
+
+There are several tools that aim to break down some of this barriers and facilitate the approximation of these individuals to programming. 
+
+%There is a tool that aims to break down some of this barriers and facilitating the approximation of these individuals to programming. It is \textbf{Rosetta}, an extensible IDE based on \textbf{DrRacket} and target at architects and designers.\cite{lopes2011portable} The users specify their models in Rosetta that generates the geometry and transports all this data to the CAD tool that then moves the data to the GPU to graphics visualization. Rosetta works with various CAD tools because it also have interoperability as a special concern. 
+
+With this rises the problem of performance because running this code is much faster than manual modeling, so the user is able to create massive amounts of geometry fast with tools like Rosetta and they usually have to wait a lot of time for all that geometry to be generated and then rendered for visualization. It takes a lot of time to generate this geometry but the communication and data transfer also have a significant role on this wait. This problem is more important in the development phase when the model is always changing and the user wants to see the effect of small changes immediately, if with each small change they have to wait a significant amount of time it have a significant impact for the work of the designers.
+
+%There is an area of research that addresses this problem named \emph{Procedural Content Generation}, or \emph{Procedural Generation}. This have applications for example in the creation of large and/or complex scenarios for games and movies or the creation of models to use for simulation of cities. This examples involves the generation of large amounts of forms that would be impracticable with the manual approach to content creation.
+
+This work is being developed in the context of Rosetta and proposes a solution to this problem. It does it by eliminating layers while trying to transfer the minimum possible data between layers. First we aim to get the geometry as fast as possible to the GPU, so since our goal is just visualization we jump the CAD layer. Another action is to reduce the amount of data that is transferred and it is achieved by transferring only a very concise description of the geometry that is generated by code running on the GPU. Also some techniques will be studied and applied to improve performance.
+
+
+
+
+%FALAR DO FEEDBACK A DAR AO USER
+
+
+ 
+
+
+
+
+
+
+ 

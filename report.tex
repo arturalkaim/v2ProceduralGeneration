@@ -1,0 +1,65 @@
+\documentclass[runningheads,a4paper]{./llncs2e/llncs}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+%\usepackage{fixltx2e}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage[nolist,nohyperlinks]{acronym}
+% Maintain images and tables within their respective sections
+\usepackage[section,subsection,subsubsection]{extraplaceins}
+\usepackage{epstopdf}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{url}
+\usepackage{lipsum}
+
+\setcounter{secnumdepth}{3}
+
+%
+% Change the margins
+%
+% \usepackage[margin=2.9cm]{geometry}
+
+\begin{document}
+\title{Procedural Generation}
+
+\subtitle{City Modeling}
+\author{Artur Alkaim}
+
+\institute{Instituto Superior Técnico, Universidade de Lisboa
+\path{arturalkaim@tecnico.ulisboa.pt}\\
+\url{http://tecnico.ulisboa.pt/}}
+
+\toctitle{Procedural Generation}
+\tocauthor{Artur Alkaim}
+\maketitle
+
+\input{sections/1-abstract.tex}
+\input{sections/2-keywords.tex}
+\input{sections/3-introduction.tex}
+\input{sections/3-0-Overview.tex}
+\input{sections/4-objectives.tex}
+\input{sections/5-related-work.tex}
+\input{sections/6-architecture.tex}
+\input{sections/7-evaluation.tex}
+\input{sections/8-conclusions.tex}
+%\newpage
+%\appendix
+%\input{sections/9-appendix.tex}
+
+
+
+% 
+% Bibliography
+% 
+\bibliographystyle{plain} 
+
+% replace example.bib with your .bib
+\bibliography{example.bib} 
+
+\end{document}
