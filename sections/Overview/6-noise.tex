@@ -1,6 +1,6 @@
 %!TEX root = ../../report.tex
 
-\subsubsection{Noise} % (fold)
+\subsection{Noise} % (fold)
 \label{ssub:noise}
 
 
@@ -11,7 +11,7 @@ The psedorandom property is important and a true random function like \emph{whit
 
 The properties of an ideal \emph{noise} functions are as follows \cite{Ebert2002}:
 \begin{itemize}
-	\item \emph{noise} is a repeatable pseudorandomm function of its inputs
+	\item \emph{noise} is a repeatable pseudorandom function of its inputs
 	\item \emph{noise} has a known range, namely, from -1 to 1.
 	\item \emph{noise} is band-limited, with a maximum frequency of about 1.
 	\item \emph{noise} doesn't exhibit obvious periodicities or regular patterns. Such pseudorandom functions are always periodic, but the period can be made very long and therefore the periodicity is not conspicuous.
@@ -23,7 +23,7 @@ With this noise function, it's generated a sequence of values that are interpola
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.75\textwidth]{img/Theory/Perlin_Noise/Merge.png}
+	\includegraphics[width=0.55\textwidth]{img/Theory/Perlin_Noise/Merge.png}
 	\caption{Different noise functions}
 	\label{fig:merge}
 \end{figure}
@@ -32,7 +32,7 @@ For instance, the Figure~\ref{fig:merge} shows the result of the interpolation o
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.65\textwidth]{img/Theory/Perlin_Noise/perlin1.png}
+	\includegraphics[width=0.55\textwidth]{img/Theory/Perlin_Noise/perlin1.png}
 	\caption{``You may even imagine that it looks a little like a mountain range."}
 	\label{fig:noise}
 \end{figure}
@@ -57,23 +57,23 @@ Noise can also be used to generate planes. The method used is the same as the 1D
                 \includegraphics[width=\textwidth]{img/Theory/Perlin_Noise/gradient_fire.png}
                 \label{fig:Fbrocoli}
         \end{subfigure}
-        \caption{Gradient maped textures from \cite{NoisesGAMES}}
+        \caption{Gradient mapped textures from \cite{NoisesGAMES}}
         \label{fig:NTextures}
 \end{figure}
 
 Another application for Noise planes are with \emph{object placement} on a grid. By creating a noise plane with the same size of the grid, with each cell of the grid corresponding to one pixel of noise, the object placement is done by choosing each object for each cell according to the noise value. Figure~\ref{fig:MyNCity}.
-Figure~\ref{fig:NCity} shows a city which the buildings where placed with the use of a noise plane. In this case the noise domain was splited in three intervals, each one corresponds to one type of building (commercial, industrial or residential). After setting the type for one block, the system randomly chooses one from a set of buildings of that type.
+Figure~\ref{fig:NCity} shows a city which the buildings where placed with the use of a noise plane. In this case the noise domain was splitted in three intervals, each one corresponds to one type of building (commercial, industrial or residential). After setting the type for one block, the system randomly chooses one from a set of buildings of that type.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.95\textwidth]{img/Theory/Perlin_Noise/AppletNoName201501191604.png}
+    \includegraphics[width=0.55\textwidth]{img/Theory/Perlin_Noise/AppletNoName201501191604.png}
     \caption{Objects Placed following a noise function}
     \label{fig:MyNCity}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.95\textwidth]{img/Theory/Perlin_Noise/NoisyCity.jpg}
+	\includegraphics[width=0.55\textwidth]{img/Theory/Perlin_Noise/NoisyCity.jpg}
 	\caption{Objects Placed with a noise plane from \cite{NoisesGAMES}}
 	\label{fig:NCity}
 \end{figure}

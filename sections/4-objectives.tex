@@ -7,16 +7,25 @@
 \section{Objectives}
 \label{sec:objectives}
 
-The primary goal of this work is to provide an alternative for the rendering of large amouts of geometry as fast as possible. This system should also support a significant ammout of geometric primitives to be able to create the larger set of models as possible.
 
-This work is being developed in the context of a bigger project, the Rosetta Project that aims to creat a tool for generative design to help architects and designers to develop their work proceduraly. 
+The overall goal of this work is to build a GD tool that solves the performance problems that raise with the modeling and generation of large amounts of geometry. It should be an easy to use tool with very high performance that will be focus on model visualization removing features regarding interactive model manipulation.
 
-In the context of Rosetta this system will act as a preview mode that alows the users to rapidly see the changes they make on their model during their creative process.
-
-The main focus is to implement a set of geometric primitives such as \emph{boxes}, \emph{cylinders} or \emph{spheres} that will allow users to model and some example functions such as \emph{city}.
+It should be able to support Immediate Feedback for much larger models than the current GD tools can handle. This system should also provide a significant amount of geometric primitives such as \emph{boxes}, \emph{cylinders} or \emph{spheres} that will allow users to model.
 
 
-On the next section will be presented related works that have simmilar objectives.
+
+The goal is to build a programming interface, that is how users will interact with the system, and it should be easy and simple to use yet broad and powerful to give them freedom to create. This will be the visible part of the system. 
+
+After there is the \textbf{GPU communication} module that implement the functions provided. This module will generate the geometry description, create the windows and transfer the data to the GPU. This module will implement a set of techniques that will 
+
+The \textbf{GPU pipeline} is where the geometry will be generated and is explained in Section~\ref{sub:modern_opengl}.
+
+
+This work is being developed in the context of the Rosetta that is also a GD tool that helps architects and designers to develop their work procedurally. Rosetta is an extensible IDE based on \textbf{DrRacket} and built in Racket. 
+
+In this context the module will act as a fast preview mode that allows the users to rapidly see the changes they make on their model during their creative process.
+
+On the next section will be presented related works that have similar objectives.
 
 
 %The world population has grown at a faster and faster pace, which is causing overcrowding and lack of resources in various locations of the globe. For example in the Emirates, the economic boom supported by the oil business is creating lots of work oportunities, thus thousands of people from everywere in the world are moving there. However the country was not prepared to accommodate the growing population currently living there. 
