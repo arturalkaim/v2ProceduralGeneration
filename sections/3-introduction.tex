@@ -38,7 +38,7 @@ One big difference from traditional approaches is that the users do not see the 
 	\includegraphics[width=0.5\textwidth]{img/Architecture/GD-Common-Pipeline.png}
 	\caption{Common Generative Design Pipeline}
 	\label{fig:GD_Pipeline}
-	\vspace{-15pt}
+	\vspace{-35pt}
 \end{wrapfigure}
 
 With this rises the problem of performance. The architects and designers implement their models on GD tools that generate the geometry. Then, as Figure~\ref{fig:GD_Pipeline} shows, the all geometry data is serialized and the data is transfered through sockets. This data have to be deserialized on the other side within the CAD application. This CAD application takes the objects and processes them adding their specific information to the geometry. At last the geometry is moved to the GPU that renders the model. All this steps are time-consuming mostly caused by the large amount of data that is repeatedly transfered. There is also another problem, CAD applications are built for manual modeling mainly, and are not prepared to receive large amounts of geometry very fast. Running the code is much faster than manual modeling, so the user is able to create massive amounts of geometry fast that is fed to the CAD that gets overloaded. With this issues, it is hard to get good performance, specially with large models, that makes impossible to have true immediate feedback. Users sometimes have to wait a lot of time for the model to be rendered.
