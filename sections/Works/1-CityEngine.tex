@@ -3,7 +3,7 @@
 \subsection{CityEngine \cite{Parish2001} \cite{Muller2006}}
 \label{sub:cityengine}
 
-It's a three-dimensional (3D) modeling software developed by Procedural Inc. (now part of the Esri R\&D Center). It's specialized in the generation of 3D urban environments. With the procedural modeling approach, CityEngine enables an efficient creation of detailed and large-scale 3D city models with a lot of control from the user. 
+It's a three-dimensional (3D) modeling software developed by Procedural Inc. (now part of the Esri R\&D Center). It's specialized in the generation of 3D urban environments. With the procedural modeling approach, CityEngine enables an efficient creation of detailed and large-scale 3D city models with a lot of control from the user. This system applies the concept of Immediate Feedback by allowing the user to immediately see the results of each change. This is implemented through a set of sliders that are assigned to various indicators in the model that can be as high level as the \emph{size of the city} or as specific as the width of the windows or the number of floors in a building.
 
 \subsubsection{RoadNetwork} % (fold)
 \label{ssub:roadnetwork1}
@@ -36,7 +36,8 @@ CGA Shape is a Shape Grammar that was introduced by Pascal Muller, Peter Wonka a
 
 This tool allows the user to model buildings with an high control and in different ways. It can be done by text, writing production rules from a shape grammar or with a visual language like Grasshopper 3D, that is nice for simple works but it's impossible to work with a slightly more complex work. 
 
-Mass Modeling
+\paragraph{Mass Modeling} % (fold)
+\label{par:mass_modeling}
 To model a building the first step is to create a mass model of the entire building by assembling basic shapes. With scaling, translation rotation and split applied to basic shapes namely I, L, H, U and T as shown in the Figure~\ref{fig:basic_shapes}.
 
 \begin{figure}[htbp]
@@ -45,6 +46,8 @@ To model a building the first step is to create a mass model of the entire build
   \caption{Basic shapes}
   \label{fig:basic_shapes}
 \end{figure}
+
+% paragraph mass_modeling (end)
 
 The next step is to add the roof, from a set of basic roof shapes or general L-Systems.
 
@@ -64,7 +67,7 @@ The result can be an city like Figure~\ref{fig:bigCity}, with approximately 2600
   \label{fig:bigCity}
 \end{figure}
 
-City Engine results can be imported by Maya, to achieve better results. Like the Figure~\ref{fig:cityMaya}, that represents a ‘virtual’ Manhattan.
+City Engine outputs can be imported by Maya\footnote{\url{http://www.autodesk.com/products/maya/overview}}, to achieve better results. Like the Figure~\ref{fig:cityMaya}, that represents a ‘virtual’ Manhattan.
 
 \begin{figure}[htbp]
   \centering

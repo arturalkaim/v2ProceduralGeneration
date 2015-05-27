@@ -11,7 +11,7 @@
 \usepackage{wrapfig}
 \usepackage[nolist,nohyperlinks]{acronym}
 % Maintain images and tables within their respective sections
-\usepackage[section,subsection,subsubsection]{extraplaceins}
+%\usepackage[section,subsection,subsubsection]{extraplaceins}
 \usepackage{epstopdf}
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
@@ -39,6 +39,25 @@
 \toctitle{Procedural Generation}
 \tocauthor{Artur Alkaim}
 \maketitle
+
+\newenvironment{absolutelynopagebreak}
+  {\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
+
+\lstdefinestyle{racket}{
+  language=Lisp,
+  basicstyle=\tt\small,
+  columns=fullflexible,
+  commentstyle=\color{Gray},
+  keywordstyle=\color{Blue},
+  identifierstyle=\color{Blue},
+  stringstyle=\color{Green},
+  numbers=left,
+  numberstyle=\small\tt,
+  frame=lines,
+}
 
 \input{sections/1-abstract.tex}
 \input{sections/2-keywords.tex}
