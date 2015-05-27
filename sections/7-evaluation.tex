@@ -7,14 +7,13 @@
 \section{Evaluation}
 \label{sec:evaluation}
 
-This work will be evaluated in two distinct concerns: \emph{performance} and \emph{usability}.
+This work will be evaluated in two distinct concerns: \emph{functionality} and \emph{performance}.
 
-Performance is the main concern throughout all this work so this point will be evaluated through benchmarks and comparing the time that this system takes to generate and render a set of examples to the normal pipeline.
+To evaluate this system will be implemented an interface in Racket to be tested in the context of Rosetta. Rosetta is a GD tool that is largely used by a community of architects that use it to create large models. They have a large amount of examples to be run for comparison. I will use this same set of examples to benchmark my system.
 
-As this work will have to provide an API, it is important to know if it is easy to use and have the needed functionality for the users to produce their models.
+This will show how broad is the system functionality, and it should implement a large set of functionality that allows the generation of a significant set of the examples. It will also test the correctness of the system, by allowing the comparison and to check if the examples generate the exactly matching results.
 
-To evaluate this system will be implemented an interface in Racket to be tested in the context of Rosetta. Rosetta is a GD tool that is largely used by a community of architects that use it to create large models. They have a large amount of examples to be run for comparison. 
-
+And performance is the main concern throughout all this work, and it will be evaluated by comparison with Rosetta's several backends with the same benchmarks.
 
 
 %Explain how you are going to show your results (statistical data, cpu performance etc). Answer the following questions:
