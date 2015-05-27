@@ -20,7 +20,7 @@
 \usepackage{lipsum}
 \usepackage[table]{xcolor}
 
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{4}
 
 %
 % Change the margins
@@ -30,16 +30,17 @@
 \begin{document}
 \title{Procedural Generation}
 
-\subtitle{City Modeling}
-\author{Artur Alkaim}
+\subtitle{Fast visualization of large geometry}
+\author{Artur Alkaim\\ \path{arturalkaim@tecnico.ulisboa.pt}}
 
-\institute{Instituto Superior Técnico, Universidade de Lisboa
-\path{arturalkaim@tecnico.ulisboa.pt}\\
+\authorrunning{Artur Alkaim}
+\titlerunning{Procedural Generation}
+
+\institute{Instituto Superior T\'ecnico, Universidade de Lisboa\\
 \url{http://tecnico.ulisboa.pt/}}
 
-\toctitle{Procedural Generation}
-\tocauthor{Artur Alkaim}
 \maketitle
+
 
 \newenvironment{absolutelynopagebreak}
   {\par\nobreak\vfil\penalty0\vfilneg
@@ -69,11 +70,6 @@
 \input{sections/6-architecture.tex}
 \input{sections/7-evaluation.tex}
 \input{sections/8-conclusions.tex}
-\newpage
-\appendix
-\input{sections/9-appendix.tex}
-
-
 
 % 
 % Bibliography
@@ -82,5 +78,9 @@
 
 % replace example.bib with your .bib
 \bibliography{example.bib} 
+
+\newpage
+\appendix
+\input{sections/9-appendix.tex}
 
 \end{document}

@@ -33,17 +33,13 @@ For instance the following code results in the Figure~\ref{fig:pic1} that is a p
 %\begin{lstlisting}[frame=single,language=Lisp]
 
 \lstset{style=racket}
-\begin{absolutelynopagebreak}
 \begin{lstlisting}
 (define (building x y z w l h)
   (let ([h1 (* 0.7 h)]
         [h2 (* 0.4 h)])
     (begin
       (box x y h1 w l h1)
-      (cylinder x y (+ (* h1 2) h2) (* 0.7 w) h2)
-      )
-    )
-  )
+      (cylinder x y (+ (* h1 2) h2) (* 0.7 w) h2))))
 
 (init 1000)
 
@@ -54,18 +50,13 @@ For instance the following code results in the Figure~\ref{fig:pic1} that is a p
 
 (start)
 \end{lstlisting}
-\end{absolutelynopagebreak}
+%\begin{absolutelynopagebreak}
+
+%\end{absolutelynopagebreak}
 
 The \emph{init} command makes an initialization of the system and its argument is an estimation of the number of primitives just for optimization purposes, the \emph{start} command creates the window and starts the visualization. In between the model is created, in this case the code that creates a squared city model with buildings of random hight.
 
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.95\textwidth]{img/Solution/City2-100*100.png}
-	\caption{City with ~40k buildings}
-	\label{fig:pic1}
-\end{figure}
-
-\colocarFiguramaisRodada
+\colocarFiguraMaisRodada
 
 \begin{figure}[htb]
 	\centering

@@ -1,0 +1,9 @@
+PWD C:/Users/Artur/Documents/GitHub/v2ProceduralGeneration/sections
+INPUT c:/texlive/2014/texmf.cnf
+INPUT c:/texlive/2014/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2014/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT c:/Users/Artur/Documents/GitHub/v2ProceduralGeneration/sections/4-objectives.tex
+OUTPUT C:\Users\Artur\Documents\GitHub\v2ProceduralGeneration\sections\Output/4-objectives.log
+INPUT c:/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT c:/texlive/2014/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT c:/texlive/2014/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
