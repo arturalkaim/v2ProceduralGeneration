@@ -7,8 +7,16 @@
 \section{Architecture} % (fold)
 \label{sec:architecture}
 
+This section present the architecture of the solution that we propose, but before will introduce some technology that is used in the solution.
+
+\input{sections/Overview/OpenGL.tex}
+
+\subsection{Solution} % (fold)
+\label{sub:solution}
+
 This work will follow the architecture described in Figure~\ref{fig:architecture}.
-There will be a module in Racket that will provide a Racket interface for the rest of the system using \emph{Racket FFI}. Is through this interface that the users will interact with the system. This will be a layer that will not have an impact on performance.
+There will be a module in Racket that will provide a Racket interface for the rest of the system using \emph{Racket FFI}. 
+Is through this interface that users will interact with the system. This will be a layer that will not have an impact on performance.
 
 
 \begin{wrapfigure}{r}{0.5\textwidth}
@@ -20,14 +28,26 @@ There will be a module in Racket that will provide a Racket interface for the re
 	\vspace{-15pt}
 \end{wrapfigure}
 
-The second step is the OpenGL layer, that implements the Racket interface and then creates the window and manages user input. The functions provided to Racket will create here the description of the geometry that will be \emph{amplified} in the next phase. This description is one $GL\_POINT$ that represent each geometric primitive and is embedded with an array of floats that encode the position, the type of geometry and specific information like size or number of sides. 
+The second step is the OpenGL layer, that implements the Racket interface and then creates the window and manages user input. The functions provided to
+Racket will create here the description of the geometry that will be \emph{amplified} in the next phase. This description is one $GL\_POINT$ that
+represent each geometric primitive and is embedded with an array of floats that encode the position, the type of geometry and specific information like
+size or number of sides. For example, to create a cylinder, instead of generating all the points that represent a cylinder, that can have $2\times 32$ points, each one with three values so $193$ values in total, we generate a description with only 7 values that encode the primitive type, three values for the position, and three values for the size in each direction.
 
-In the last step are the shaders, where most of the work is done. This receives the small description of the geometry and generates the primitives to be drawn. To achieve this, it is applied the concept of geometry amplification. As explained in Section~\ref{sub:geometriy_shaders}, this method has limitations that could make an impact on how the geometry generation is implemented. However OpenGL guarantees support for at least 256 vertices which is enough to generate the majority of geometric primitives. Since this problem is hardware dependent and GPU hardware is getting more powerful this should not be a problem in the near future. 
-To achieve high performance with this system, will be explored and implemented within this module the concepts of level of detail (LOD) and object culling. The first is related with the detail which each object is generated in relation with the camera position, generating  objects with high detail when they are close to the camera and to progressively lose detail when move away from the camera.  At the same time, objects that are partly or completely covered by other are generated in order to decrease the detail or even prevent them from being generated.
+In the last step are the shaders, where most of the work is done. This receives the small description of the geometry and generates the primitives to be
+drawn. To achieve this, it is applied the concept of geometry amplification. As explained in Section~\ref{sub:geometriy_shaders}, this method has
+limitations that could make an impact on how the geometry generation is implemented. However OpenGL guarantees support for at least 256 vertices which
+is enough to generate the majority of geometric primitives. Since this problem is hardware dependent and GPU hardware is getting more powerful this
+should not be a problem in the near future. 
+To achieve high performance with this system, will be explored and implemented within this module the concepts of level of detail (LOD) and object
+culling. The first is related with the detail which each object is generated in relation with the camera position, generating  objects with high detail
+when they are close to the camera and to progressively lose detail when move away from the camera.  At the same time, objects that are partly or
+completely covered by other objects are generated in order to decrease the detail or even prevent them from being generated.
 
-This architecture significantly reduces the amount of data that is moved between layers and takes advantage of the power that recent GPUs have.
+This architecture significantly reduces the amount of data that is moved between layers and takes advantage of the power that recent GPUs have. 
+In order to validate this architecture, one prototype has been implemented. This prototype currently supports a subset of the geometric primitives: cubes and cylinders.
 
-For instance the following code results in the Figure~\ref{fig:pic1} that is a procedural generated model of a city with ~40k buildings. This example was generated with the current prototype with the following Racket code:
+For instance the following code results in the Figure~\ref{fig:pic1} that is a procedural generated model of a city with ~40k buildings. This example
+was generated with the current prototype with the following Racket code:
 
 
 %\begin{lstlisting}[frame=single,language=Lisp]
@@ -54,7 +74,9 @@ For instance the following code results in the Figure~\ref{fig:pic1} that is a p
 
 %\end{absolutelynopagebreak}
 
-The \emph{init} command makes an initialization of the system and its argument is an estimation of the number of primitives just for optimization purposes, the \emph{start} command creates the window and starts the visualization. In between the model is created, in this case the code that creates a squared city model with buildings of random hight.
+The \emph{init} command makes an initialization of the system and its argument is an estimation of the number of primitives just for optimization
+purposes, the \emph{start} command creates the window and starts the visualization. In between the model is created, in this case the code that creates
+a squared city model with buildings of random height.
 
 \colocarFiguraMaisRodada
 

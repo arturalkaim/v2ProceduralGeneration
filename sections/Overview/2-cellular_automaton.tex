@@ -1,23 +1,44 @@
 %!TEX root = ../../report.tex
 
-\subsection{Cellular Automaton} % (fold)
+\subsubsection{Cellular Automaton} % (fold)
 \label{sub:cellular_automaton}
 
-It's a model of a system of cells within a grid with a determined shape, each of this cells can be on one of a finite set of states. It evolves during a finite amount of time steps with a set of simple rules according with the state of the neighboring cells.
+A cellular Automaton is a model of a system of cells within a grid with a given shape, each of this cells can be on one of a finite set of states. It evolves during a finite amount of time steps with a set of simple rules according to each state of the neighboring cells.
 The neighborhood of the cell can be defined in many different ways, the most common is the use of the adjacent cells. 
 
-In the case where each cell have two possible states and the next generation state depends only on the previous state of the cell and the two immediate neighbors is called an \emph{elementary cellular automaton}. In this case we have $2^3 = 8$ possible patterns for a neighborhood and $2^8 = 256$ sets of possible different rules. This rules are referred by their \emph{Wolfram code}, defined by Wolfram. 
+This models have various applications, such as modeling of nature aspects (Figure~\ref{fig:CArule30shell}), textures, and as inspiration to architecture (Figure~\ref{fig:CAarchitecture}).
 
-A common initial state for this elementary cellular automata is a random line. But to able to compare the results between rules and get clean results another option is to start with a line with zeros except the middle cell with one. Applying this second option and the following set of rules (the rule 30):
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/Theory/Cellular_A/dome1.jpg}
+                \caption{}
+  %              \label{fig:CAdome}
+        \end{subfigure}%
+        %~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+          ~~
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/Theory/Cellular_A/main1.jpg}
+                \caption{}
+   %             \label{fig:CArule30}
+        \end{subfigure}
+        \caption{Examples of cellular automata applied in architecture}
+        \label{fig:CAarchitecture}
+\end{figure}
+
+The case where each cell have two possible states and the next generation state depends only on the previous state of the cell and the two immediate neighbors is called an \emph{elementary cellular automaton}. In this case we have $2^3 = 8$ possible patterns for a neighborhood and $2^8 = 256$ sets of possible different rules. This rules are referred by their \emph{Wolfram code} \cite{CellularAutWOLFRAM}. 
+
+A common initial state for this elementary cellular automata is a random line. But to be able to compare the results between rules and get clean results another option is to start with a line with zeros except the middle cell that is initialized with the value one. Applying this second option and the set of rules in Figure~\ref{fig:CArule} (the rule 30), we get the pattern in the Figure~\ref{fig:resultCA} that represents the evolution of a cellular automaton over a few generations.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.85\textwidth]{img/Theory/Cellular_A/Rules.png}
 	\caption{Example Production Rules\cite{Shiffman2012}}
-	\label{fig:label}
+	\label{fig:CArule}
 \end{figure}
 
-we get the pattern in the Figure~\ref{fig:resultCA} that represents the evolution of this Cellular automaton over generations:
+
 
 \begin{figure}[H]
     \centering
@@ -30,7 +51,7 @@ we get the pattern in the Figure~\ref{fig:resultCA} that represents the evolutio
 In Figure~\ref{fig:resultCA} each line represents an iteration of the system with the application of the rules. With this set of rules a Sierpiński triangle is reproduced.
 
 
-Cellular automata are used mainly to model phenomena that occurs in the physical world, most of them can only express the basic idea of a phenomenon but some are accurate enough to be able to make predictions.
+Cellular automata are used mainly to model phenomena that occur in the physical world, most of them can only express the basic idea of a phenomenon, but some are accurate enough to be able to make predictions.
 
 In this context, cellular automata are used to model natural shapes and textures, the Figure~\ref{fig:CAshell} shows a natural texture on a Textile Cone Snail that looks like the patterns formed with the cellular automaton in the Figure~\ref{fig:CArule30}.
 
@@ -38,7 +59,7 @@ In this context, cellular automata are used to model natural shapes and textures
 
 \begin{figure}
         \centering
-        \begin{subfigure}[b]{0.45\textwidth}
+        \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{img/Theory/Cellular_A/shell.jpeg}
                 \caption{a)}
 				\label{fig:CAshell}
@@ -46,7 +67,7 @@ In this context, cellular automata are used to model natural shapes and textures
         %~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
           %(or a blank line to force the subfigure onto a new line)
           ~~
-        \begin{subfigure}[b]{0.45\textwidth}
+        \begin{subfigure}[b]{0.5\textwidth}
                 \includegraphics[width=\textwidth]{img/Theory/Cellular_A/Rule30.png}
 				\caption{b)}
 				\label{fig:CArule30}

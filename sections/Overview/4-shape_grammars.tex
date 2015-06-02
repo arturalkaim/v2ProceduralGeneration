@@ -1,14 +1,14 @@
 %!TEX root = ../../report.tex
 
-\subsection{Shape Grammars} % (fold)
+\subsubsection{Shape Grammars} % (fold)
 \label{ssub:shape_grammars}
 
 
-Shape Grammars can be considered grammars for design. In stead of having symbols or letters as components of the alphabet, it has shapes that can be in 2D or 3D. And have production rules that are composed by this shapes, that specify the evolution of the system. With this process, similar to the L-Systems explained before, the shape starts from a seed, i.e. a usually simple shape and can evolve to one big and/or complex shape.
+Shape Grammars can be considered grammars for design. Instead of having symbols or letters as components of the alphabet, it has shapes that can be in 2D or 3D, and has production rules that are composed by these shapes, that specify the evolution of the system. With this process, similar to the L-Systems explained before, the shape starts from a seed, i.e. a usually simple shape and can evolve to one big and/or complex shape.
 
-The process is performed in two steps, the recognition of a shape and the replacement according to the rules that are previously defined. 
+The process is performed in two steps, the recognition of a shape and the replacement according to the rules previously defined. 
 
-The Figure~\ref{fig:SGrammars} exemplify one shape grammar, with one rule and the evolution of the application of this rule to the shapes iteratively. In this image, it's shown that from very simple initial shape, can be generated a complex from with a few iterations.
+Figure~\ref{fig:SGrammars} exemplifies one shape grammar with one rule, and the evolution of the application of this rule to the shapes iteratively. In this image, it is shown that from very simple initial shape, a complex from can be generated after a few iterations.
 
 \begin{figure}
         \centering
@@ -29,7 +29,7 @@ The Figure~\ref{fig:SGrammars} exemplify one shape grammar, with one rule and th
         \label{fig:SGrammars}
 \end{figure}
 
-This is applied to the generation of buildings in the CityEngine \ref{sub:cityengine} system, using 3D blocks for the main form, and 2D shapes to design the facades.
+In the CityEngine \cite{Muller2006} system, this is applied to the generation of buildings using 3D blocks for the main form, and 2D shapes to design the facades.
 
 % \begin{figure}[htbp]
 % 	\centering
@@ -38,7 +38,7 @@ This is applied to the generation of buildings in the CityEngine \ref{sub:cityen
 % 	\label{fig:SGBuilding}
 % \end{figure}
 
-The Figure~\ref{fig:SGBuilding} shows a simple building that I modelled using CityEngine and it's CGA Shape Grammar. But CGA is powerful enough to model much more complex buildings like the Figure~\ref{fig:CEBuilding}.
+Figure~\ref{fig:SGBuilding} shows a simple building that I modelled using CityEngine and its CGA Shape Grammar (Section~\ref{sub:cityengine}). But CGA is powerful enough to model much more complex buildings like the one in Figure~\ref{fig:CEBuilding}.
 
 
 % \begin{figure}[htbp]
@@ -52,13 +52,13 @@ The Figure~\ref{fig:SGBuilding} shows a simple building that I modelled using Ci
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=.5\linewidth]{img/Theory/Shape_Grammars/Edificio.png}
+  \includegraphics[width=.65\linewidth]{img/Theory/Shape_Grammars/Edificio.png}
   \captionof{figure}{Simple Building}
   \label{fig:SGBuilding}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=.8\linewidth]{img/Theory/Shape_Grammars/Capturar.png}
+  \includegraphics[width=1.1\linewidth]{img/Theory/Shape_Grammars/Capturar.png}
   \captionof{figure}{Complex Building \cite{Muller2006}}
   \label{fig:CEBuilding}
 \end{minipage}
