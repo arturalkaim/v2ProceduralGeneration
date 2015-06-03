@@ -62,7 +62,7 @@ This shaders work with a geometric primitive called a \emph{patch}. A patch is a
 	OpenGL supports three tessellation domains: a quadrilateral, a triangle, and a collection of isolines \cite{shreiner2013opengl}. To control the amount of tessellation two sets of values are assigned, the outer-tessellation values and the inner-tessellation values. This values define how the perimeter or the interior of the domain are subdivided respectively. 
 
 	As an example, Figure~\ref{fig:ex1TessControl} shows a triangular domain with the following tessellation levels. 
-	\begin{lstlisting}[frame=single,language=C++]
+	\begin{lstlisting}[frame=single,language=C]
 	gl_TessLevelOuter[0] = 6;
 	gl_TessLevelOuter[1] = 5;
 	gl_TessLevelOuter[2] = 8;

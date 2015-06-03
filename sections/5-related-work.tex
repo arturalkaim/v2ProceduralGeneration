@@ -7,24 +7,16 @@
 \section{Related Work}
 \label{sec:related_work}
 
-In this section I give an overview of the related work that has been carried out on procedural generation of large amounts of geometry followed by a conclusion. After that, in the following sections, are explained some techniques of procedural modeling.
+In this section I give an overview of the related work that has been carried out on procedural generation of large amounts of geometry	. After that, in the following sections, some techniques of procedural modeling are explained.
 Since the target audience of this work are architects and designers, most of the work that I present have the same target.
 
-The main goal of this systems is to generate large models. Consequently, this works face some of the same problems I face so it is important to learn about their solutions. 
+%The main goal of this systems is to generate large models. Consequently, this works face some of the same problems I face so it is important to learn about their solutions. 
 
 
 \input{sections/Works/1-CityEngine.tex}
 \input{sections/Works/2-Undiscovered-City.tex}
 
 
-\subsection{Conclusion} % (fold)
-\label{sub:conclusion}
-
-This works present ways to generate and visualize large amounts of geometry, in this cases applied to urban models. While CityEngine \cite{Parish2001} aims to allow the users to create large and realistic urban models, where they give, in the limit, total control to the users. Undiscovered City\cite{Greuter2003} is much more a visualization tool, it generates the model automatically for the user to explore.
-
-From these works there are some ideas to explore. The idea of immediate feedback that is implemented in CityEngine, with sliders, is a good input to my work. This helps the unexperienced users to easily see the how their code impact the results. Also the commands they have on the grammar could be an helpful inspiration for the design of my API.
-
-From the Undiscovered City system, since they also have massive amount of geometry, how they tackle this problem is very important source of inspiration as well.
 
 \subsection{Procedural Modeling Techniques} % (fold)
 \label{sub:procedural_modeling_techniques}
@@ -54,6 +46,18 @@ In the following sections are explained some procedural modeling techniques. The
 % subsection procedural_modelling_techniques (end)
 
 \input{sections/overview/LOD.tex}
+
+
+\subsection{Conclusion} % (fold)
+\label{sub:conclusion}
+
+The systems presented (Section~\ref{sub:cityengine},Section~\ref{sub:undiscovered_city}) show ways to generate and visualize large volumes of geometry, in this cases applied to urban models. While CityEngine \cite{Parish2001} aims to allow the users to create large and realistic urban models, where they give, in the limit, total control to the users. Undiscovered City\cite{Greuter2003} is much more a visualization tool, it generates the model automatically for the user to explore.
+
+From these works there are some ideas to explore. The idea of immediate feedback that is implemented in CityEngine, with sliders, is a good input to my work. This helps the unexperienced users to easily see the how their code impact the results. Also the commands they have on the grammar could be an helpful inspiration for the design of my API.
+
+From the Undiscovered City system, since they also have massive amount of geometry, how they tackle this problem is very important source of inspiration as well.
+
+The presented procedural modeling techniques are important for the procedural generation of geometry, such as Fractals (Section~\ref{ssub:fractals}), and Noise (Section~\ref{ssub:noise}), and will be explored and applied during the development of this work. Additionally, techniques related to visualization, such as level of detail (Section~\ref{ssub:level_of_detail}), was presented and will be explored to help improve performance.
 
 
 

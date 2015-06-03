@@ -7,14 +7,13 @@
 \section{Conclusions}
 \label{sec:conclusions}
 
-Architects and designers increasingly use programming as a tool. This powerful tool enables them to work faster and with greater creative freedom. With the development of their programming capabilities they begin to create larger, more complex models. This, unfortunately, creates a performance problem because the CAD systems being used were not built with this problem in mind. These were developed for a manual, slow usage. It was not thought at the time that a user could generate massive amounts of geometry in seconds. As a result users have to wait for large periods of time before they can see the results of their programs.
+Architects and designers increasingly use programming as a tool. This powerful tool enables them to work faster and with greater creative freedom. With the development of their programming capabilities they begin to create larger, more complex models. This, unfortunately, creates a performance problem because the CAD systems being used were not built for this kind of use. They were developed for a manual, slow usage. Because it was not thought at the time that a user could generate massive amounts of geometry in seconds. As a result generative designers, have to wait for large periods of time before they can see the results of their programs.
 
-This is a relevant problem and therefore, there is a need to this work, given that it proposes a solution that pushes further the limits of this technology.
-
-This solution must have a good performance and support the most used functions that the users need to become a valid alternative to the currently used tools.
+This is a relevant problem which this thesis attempts to solve.
+To become a valid alternative to the currently used tools, our solution must have good performance and support the most used functions that the users need.
 
 My solution shortcuts the Rosetta traditional pipeline to improve performance, doing that by using Rosetta just as an interface and transferring to the GPU as most of the processing as possible.
 
 In order to evaluate the planed architecture of our system, one prototype was implemented that already creates boxes and cylinders without transformations that allows the creation of the city example in Figure~\ref{fig:pic1}.
 
-In the future, I will explore how to implement the rest of the primitives, without losses in performance and how to introduce rotation to the objects without adding much data to the current primitive description set.
+In the future, I will explore how to implement the rest of the primitives, without losses in performance and how to introduce transformations to the objects without adding much data to the current primitive description set.

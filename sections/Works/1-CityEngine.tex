@@ -3,9 +3,16 @@
 \subsection{CityEngine \cite{Parish2001} \cite{Muller2006}}
 \label{sub:cityengine}
 
-CityEngine is a three-dimensional (3D) modeling software developed by Procedural Inc. (now part of the Esri R\&D Center). it is specialized in the generation of 3D urban environments. With the procedural modeling approach, CityEngine enables an efficient creation of detailed and large-scale 3D city models with a lot of control from the user. This system applies the concept of Immediate Feedback by allowing the user to immediately see the results of each change. This is implemented through a set of sliders that are assigned to various indicators in the model that can be as high level as the \emph{size of the city} or as specific as the width of the windows or the number of floors in a building.
+CityEngine is a three-dimensional (3D) modeling software developed by Procedural Inc. (now part of the Esri R\&D Center). Specialized in the generation of 3D urban environments. With the procedural modeling approach, CityEngine enables the efficient creation of detailed and large-scale 3D city models with a lot of control from the user. This system applies the concept of Immediate Feedback by allowing the user to immediately see the results of each change. This is implemented through a set of sliders that are assigned to various indicators in the model that can be as high level as the \emph{size of the city} or as specific as the width of the windows or the number of floors in a building.
 
 The following sections explain how CityEngine faces each of the steps in the generation of a city, such as road network generation or building modeling.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{img/Procedural-Modeling-of-Cities/interface.jpg}
+  \caption{City Engine Interface}
+  \label{fig:CEinterface}
+\end{figure}
 
 \subsubsection{RoadNetwork} % (fold)
 \label{ssub:roadnetwork1}
@@ -32,9 +39,9 @@ The Figure~\ref{fig:city} shows the evolution of this process in a map of Manhat
 \subsubsection{Buildings} % (fold)
 \label{ssub:buildings1}
 
-To implement the generation of buildings, has been created CGA, which is a shape grammar(Section~\ref{ssub:shape_grammars}) that was introduced by Pascal Muller, Peter Wonka and others, in \cite{Parish2001}. It is defined as ``a novel shape grammar for the procedural modelling of CG architecture, produces building shells with high visual quality and geometric detail." To do so, this grammar uses a group of well defined production rules.
+To implement the generation of buildings, CGA was created, which is a shape grammar(Section~\ref{ssub:shape_grammars}) that was introduced in \cite{Parish2001}. It is defined as ``a novel shape grammar for the procedural modelling of CG architecture, produces building shells with high visual quality and geometric detail." To do so, this grammar uses a group of well defined production rules.
 
-This tool allows the user to model buildings with an high control and in different ways. It can be done by text, writing production rules from a shape grammar or with a visual language like Grasshopper 3D, that is nice for simple works but it is impossible to work with a slightly more complex work. 
+This tool allows the user to model buildings with an high control and in different ways. It can be done by text, writing production rules from a shape grammar or with a visual language similar Grasshopper 3D, that is nice for simple models but it is hard to work with more complex models, for instance, Figure~\ref{fig:CEinterface} shows a set of rules (bottom left), that is relatively small but is already difficult to follow the connections between rules.
 
 \paragraph{Mass Modeling} % (fold)
 \label{par:mass_modeling}
