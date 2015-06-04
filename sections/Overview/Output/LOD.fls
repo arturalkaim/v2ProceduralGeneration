@@ -1,8 +1,0 @@
-PWD C:/Users/Artur/Documents/GitHub/v2ProceduralGeneration/sections/Overview
-INPUT c:/texlive/2014/texmf.cnf
-INPUT c:/texlive/2014/texmf-dist/web2c/texmf.cnf
-INPUT c:/texlive/2014/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Artur/Documents/GitHub/v2ProceduralGeneration/sections/Overview/LOD.tex
-OUTPUT C:\Users\Artur\Documents\GitHub\v2ProceduralGeneration\sections\Overview\Output/LOD.log
-INPUT c:/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map
-INPUT c:/texlive/2014/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm

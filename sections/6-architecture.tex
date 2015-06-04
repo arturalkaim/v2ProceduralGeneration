@@ -44,7 +44,7 @@ when they are close to the camera and to progressively lose detail when move awa
 completely covered by other objects are generated in order to decrease the detail or even prevent them from being generated.
 
 This architecture significantly reduces the amount of data that is moved between layers and takes advantage of the power that recent GPUs have. 
-In order to validate this architecture, one prototype has been implemented. This prototype currently supports a subset of the geometric primitives: cubes and cylinders.
+In order to validate this architecture, one prototype has been implemented. This prototype currently supports a subset of the geometric primitives: boxes and cylinders.
 
 For instance the following code results in the Figure~\ref{fig:pic1} that is a procedural generated model of a city with ~40k buildings. This example
 was generated with the current prototype with the following Racket code:
