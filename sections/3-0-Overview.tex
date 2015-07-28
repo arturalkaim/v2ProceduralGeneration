@@ -8,7 +8,7 @@
 \label{sec:overview}
 
 
-This section will provide an overview of this topic.  Section~\ref{sec:related_work} will explore related work. Section~\ref{sec:objectives} will address the objectives for this thesis work. Section~\ref{sec:architecture} will describe the architecture of the proposed solution. Section~\ref{sec:evaluation} will explain how this solution will be evaluated and section~\ref{sec:conclusions} will conclude this work.
+This section will provide an overview of this topic, where we explain some procedural modeling techniques that we aim to support, with some examples of application for the architects and designers. We will also introduce in Section~\ref{sub:graphic_tools} some technology that is used in the solution .  Section~\ref{sec:related_work} will explore related work. Section~\ref{sec:objectives} will address the objectives for this thesis work. Section~\ref{sec:architecture} will describe the architecture of the proposed solution. Section~\ref{sec:evaluation} will explain how this solution will be evaluated and section~\ref{sec:conclusions} will conclude this work.
 
 \subsection{Procedural Modeling} % (fold)
 \label{sub:procedural_modeling}
@@ -16,3 +16,26 @@ This section will provide an overview of this topic.  Section~\ref{sec:related_w
 \emph{Procedural Modeling} is the algorithmic generation of content instead of the usual manual creation of content. This can be applied in almost all forms of content, but is mostly used in the generation of graphic content, such as textures, geometry and animations, in which is included generative design. Procedural generation is also used for the generation of sound, with procedurally generated music and synthetic speech.
 
 The key property of procedural generation is that it describes the data entities, such as textures, geometry, or sounds, in terms of a sequence of instructions rather than as a static block of data \cite{Kelly}. This allows the production of big volumes of detailed, high quality, graphic content without the costs, both in time and money, of manual content creation. Since it is based on procedures, it provides parametric control. Users can introduce in their programs as many useful parameters as they want, which allows them, for instance, to have different results from just one implementation by just changing some control values.
+
+
+\subsection{Procedural Modeling Techniques} % (fold)
+\label{sub:procedural_modeling_techniques}
+
+In the following sections are explained some procedural modeling techniques. These techniques are applied to the generation of various types of forms procedurally.
+
+% subsection procedural_modeling_techniques (end)
+
+\input{sections/overview/1-Fractals.tex}
+
+\input{sections/overview/2-cellular_automaton.tex}
+
+\input{sections/overview/3-L-Systems.tex}
+
+\input{sections/overview/4-shape_grammars.tex}
+
+\input{sections/overview/6-noise.tex}
+
+\input{sections/overview/LOD.tex}
+
+\input{sections/Overview/OpenGL.tex}
+
